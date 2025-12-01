@@ -39,7 +39,7 @@ El proyecto utiliza el dataset [Chest X-Ray Images (Pneumonia)](https://www.kagg
 ---
 
 ## **Acceso al informe completo**
-👉 [Ver Informe Final](informe.md)
+👉 [Ver Informe Final]({{ site.baseurl }}/informe.html)
 
 ---
 

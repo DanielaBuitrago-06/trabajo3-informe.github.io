@@ -20,4 +20,4 @@ kramdown:
   syntax_highlighter: rouge
 
 url: "https://danielabuitrago-06.github.io"
-baseurl: ""
+baseurl: "/trabajo3-informe.github.io"

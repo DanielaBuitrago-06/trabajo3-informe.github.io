@@ -225,7 +225,7 @@ El análisis del dataset reveló las siguientes estadísticas:
 - La división train/test mantiene proporciones similares
 - El desbalance puede afectar el rendimiento de clasificadores no ajustados
 
-![Distribución de clases en el dataset](results/distribucion_classes.png)
+![Distribución de clases en el dataset]({{ site.baseurl }}/results/distribucion_classes.png)
 
 📊 Distribución de datos:
   Train - Normal: 1341
@@ -252,7 +252,7 @@ Las imágenes presentan alta variabilidad en dimensiones:
 - La alta variabilidad justifica el redimensionamiento a tamaño estándar
 - El preprocesamiento es crucial para normalizar las imágenes
 
-![Análisis de dimensiones de imágenes](results/analisis_dimensiones.png)
+![Análisis de dimensiones de imágenes]({{ site.baseurl }}/results/analisis_dimensiones.png)
 
 *Figura 2: Análisis de dimensiones de imágenes. Histogramas de alturas y anchos, scatter plot de relación ancho vs altura, y distribución de áreas por clase.*
 
@@ -269,7 +269,7 @@ Se compararon diferentes métodos de ecualización:
 - Limita la amplificación de ruido mediante `clip_limit`
 - Específicamente diseñado para imágenes médicas
 
-![Comparación de métodos de ecualización](results/comparacion_ecualizacion.png)
+![Comparación de métodos de ecualización]({{ site.baseurl }}/results/comparacion_ecualizacion.png)
 
 *Figura 3: Comparación entre ecualización global (HE) y CLAHE. Se muestran las imágenes resultantes y sus histogramas. CLAHE preserva mejor los detalles locales sin amplificar excesivamente el ruido.*
 
@@ -282,7 +282,7 @@ Se compararon diferentes métodos de ecualización:
 - **Parámetros**: 9 orientaciones, celdas de 8×8 píxeles, bloques de 2×2 celdas
 - **Visualización**: Muestra la distribución de gradientes orientados
 
-![Visualización de características HOG](results/hog_visualization.png)
+![Visualización de características HOG]({{ site.baseurl }}/results/hog_visualization.png)
 
 *Figura 4: Visualización de características HOG. La imagen derecha muestra la representación HOG donde se aprecian los patrones de gradientes orientados, útiles para detectar estructuras pulmonares.*
 
@@ -291,7 +291,7 @@ Se compararon diferentes métodos de ecualización:
 - **Transformación**: Logarítmica para manejar valores muy pequeños
 - **Propiedades**: Invariantes a traslación, rotación y escala
 
-![Distribución de momentos de Hu](results/hu_moments.png)
+![Distribución de momentos de Hu]({{ site.baseurl }}/results/hu_moments.png)
 
 *Figura 5: Visualización de los 7 momentos invariantes de Hu. Los primeros 4 momentos (Hu₁-Hu₄) son los más estables y utilizados, mientras que los últimos pueden ser muy pequeños y sensibles al ruido.*
 
@@ -300,7 +300,7 @@ Se compararon diferentes métodos de ecualización:
 - **Método de segmentación**: Umbralización de Otsu
 - **Aplicación**: Caracterización de formas de opacidades pulmonares
 
-![Contornos detectados](results/contour_features.png)
+![Contornos detectados]({{ site.baseurl }}/results/contour_features.png)
 
 *Figura 6: Visualización de contornos detectados mediante umbralización de Otsu. El contorno más grande se utiliza para calcular los descriptores geométricos.*
 
@@ -309,7 +309,7 @@ Se compararon diferentes métodos de ecualización:
 - **Normalización**: Por componente DC para invarianza a escala
 - **Aplicación**: Representación compacta de formas de contornos
 
-![Descriptores de Fourier](results/fourier_descriptors.png)
+![Descriptores de Fourier]({{ site.baseurl }}/results/fourier_descriptors.png)
 
 *Figura 7: Magnitud de los primeros 20 coeficientes de Fourier del contorno. Los coeficientes de baja frecuencia capturan la forma general, mientras que los de alta frecuencia capturan detalles finos.*
 
@@ -320,7 +320,7 @@ Se compararon diferentes métodos de ecualización:
 - **Parámetros**: `radius=3`, `n_points=24`, método `uniform`
 - **Aplicación**: Captura texturas locales características de tejido pulmonar
 
-![Visualización de LBP](results/lbp_features.png)
+![Visualización de LBP]({{ site.baseurl }}/results/lbp_features.png)
 
 *Figura 8: Visualización de LBP con diferentes parámetros. La imagen muestra los patrones binarios locales que caracterizan la textura de la imagen. El histograma muestra la distribución de patrones LBP.*
 
@@ -329,7 +329,7 @@ Se compararon diferentes métodos de ecualización:
 - **Parámetros**: Distancias [1, 2, 3], ángulos [0°, 45°, 90°, 135°]
 - **Propiedades calculadas**: Contrast, Dissimilarity, Homogeneity, Energy, Correlation, ASM
 
-![Matriz GLCM](results/glcm_features.png)
+![Matriz GLCM]({{ site.baseurl }}/results/glcm_features.png)
 
 *Figura 9: Visualización de la matriz GLCM (distancia=1, ángulo=0°). La matriz muestra la probabilidad de co-ocurrencia de pares de niveles de gris, capturando patrones de textura.*
 
@@ -338,7 +338,7 @@ Se compararon diferentes métodos de ecualización:
 - **Parámetros**: 3 frecuencias [0.1, 0.3, 0.5], 4 orientaciones [0°, 45°, 90°, 135°]
 - **Aplicación**: Detección de patrones direccionales y texturas a diferentes escalas
 
-![Respuestas de filtros de Gabor](results/gabor_features.png)
+![Respuestas de filtros de Gabor]({{ site.baseurl }}/results/gabor_features.png)
 
 *Figura 10: Respuestas de filtros de Gabor para diferentes frecuencias y orientaciones. Cada subfigura muestra la magnitud de la respuesta del filtro, capturando patrones direccionales en diferentes escalas.*
 
@@ -346,7 +346,7 @@ Se compararon diferentes métodos de ecualización:
 - **Características extraídas**: 6 (mean, variance, std, skewness, kurtosis, entropy)
 - **Aplicación**: Propiedades estadísticas globales de la distribución de intensidades
 
-![Estadísticas de primer orden](results/first_order_stats.png)
+![Estadísticas de primer orden]({{ site.baseurl }}/results/first_order_stats.png)
 
 *Figura 11: Histograma de intensidades con estadísticas de primer orden superpuestas (media y desviación estándar), y gráfico de barras mostrando todas las estadísticas calculadas.*
 
@@ -392,7 +392,7 @@ Se realizó análisis PCA para determinar el número óptimo de componentes:
 - **Componentes aplicados**: 50 (limitado para eficiencia)
 - **Reducción**: 26,338 → 50 características (99.8% de reducción)
 
-![Análisis PCA](results/pca_analysis.png)
+![Análisis PCA]({{ site.baseurl }}/results/pca_analysis.png)
 
 *Figura 12: Análisis de componentes principales. Gráfico izquierdo muestra la varianza explicada acumulada, indicando que 73 componentes capturan el 95% de la varianza. Gráfico derecho muestra la varianza explicada por los primeros 20 componentes.*
 
@@ -428,7 +428,7 @@ Se evaluaron 7 modelos diferentes. Los resultados completos se presentan en la s
    - Posible causa: Entrenamiento limitado (3 épocas) y arquitectura simple
    - Requiere más épocas y ajuste de hiperparámetros
 
-![Comparación de modelos](results/model_comparison.png)
+![Comparación de modelos]({{ site.baseurl }}/results/model_comparison.png)
 
 ================================================================================
 📊 RESUMEN FINAL - COMPARACIÓN DE MÉTODOS
@@ -449,19 +449,19 @@ Logistic Regression      0.80   0.842105    0.80  0.745098 0.986667
 
 Las matrices de confusión permiten analizar los tipos de errores cometidos por cada modelo:
 
-![Matriz de confusión - SVM Linear](results/cm_svm_linear.png)
+![Matriz de confusión - SVM Linear]({{ site.baseurl }}/results/cm_svm_linear.png)
 
 *Figura 14: Matriz de confusión para SVM Linear. Muestra 16 predicciones correctas de 20 muestras de prueba (4 falsos negativos).*
 
-![Matriz de confusión - Random Forest](results/cm_random_forest2.png)
+![Matriz de confusión - Random Forest]({{ site.baseurl }}/results/cm_random_forest2.png)
 
 *Figura 15: Matriz de confusión para Random Forest. Muestra 15 predicciones correctas (3 falsos negativos, 2 falsos positivos).*
 
-![Matriz de confusión - k-NN](results/cm_knn.png)
+![Matriz de confusión - k-NN]({{ site.baseurl }}/results/cm_knn.png)
 
 *Figura 16: Matriz de confusión para k-NN (k=3). Rendimiento similar a SVM Linear con 16 predicciones correctas.*
 
-![Matriz de confusión - Logistic Regression](results/cm_logistic_regression.png)
+![Matriz de confusión - Logistic Regression]({{ site.baseurl }}/results/cm_logistic_regression.png)
 
 *Figura 17: Matriz de confusión para Regresión Logística. Excelente rendimiento con 16 predicciones correctas y mejor ROC AUC.*
 
@@ -470,7 +470,7 @@ Las matrices de confusión permiten analizar los tipos de errores cometidos por 
 
 Las curvas ROC permiten evaluar la capacidad de discriminación de los modelos:
 
-![Curvas ROC](results/roc_curves.png)
+![Curvas ROC]({{ site.baseurl }}/results/roc_curves.png)
 
 *Figura 19: Curvas ROC para todos los modelos con probabilidades disponibles. Logistic Regression muestra la mejor curva (AUC = 0.9867), seguida de SVM Linear (AUC = 0.9733). La línea punteada representa un clasificador aleatorio (AUC = 0.5).*
 
@@ -487,7 +487,7 @@ Las curvas ROC permiten evaluar la capacidad de discriminación de los modelos:
 
 El modelo Random Forest proporciona medidas de importancia de características:
 
-![Importancia de características](results/cm_random_forest.png)
+![Importancia de características]({{ site.baseurl }}/results/cm_random_forest.png)
 
 *Figura 20: Top 10 características más importantes según Random Forest. Las características HOG dominan la importancia, seguidas de características de textura (LBP, GLCM).*
 
