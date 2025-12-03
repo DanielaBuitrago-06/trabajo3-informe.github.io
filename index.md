@@ -1,12 +1,12 @@
 ---
-title: "Visión por Computador II – Proyecto Final"
+title: "Visión por Computador – Proyecto Final"
 layout: default
 nav_order: 1
 ---
 
 # **Proyecto Final — Clasificación de Neumonía en Rayos X usando Descriptores Clásicos**
 
-**Curso:** Visión por Computador II – 3009228  
+**Curso:** Visión por Computador – 3009228  
 **Semestre:** 2025-02  
 **Facultad de Minas, Universidad Nacional de Colombia**  
 **Departamento de Ciencias de la Computación y de la Decisión**
@@ -63,5 +63,5 @@ El sistema logra:
 ## **Créditos**
 
 **Desarrollado por:** Daniela Buitrago  
-**Curso:** Visión por Computador II – 3009228  
+**Curso:** Visión por Computador – 3009228  
 **Universidad Nacional de Colombia – Facultad de Minas (2025-02)**
