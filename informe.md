@@ -1,6 +1,6 @@
 # **Informe Final — Clasificación de Neumonía en Rayos X usando Descriptores Clásicos**
 
-**Curso:** Visión por Computador II – 3009228  
+**Curso:** Visión por Computador – 3009228  
 **Semestre:** 2025-02  
 **Facultad de Minas, Universidad Nacional de Colombia**  
 **Departamento de Ciencias de la Computación y de la Decisión**  
